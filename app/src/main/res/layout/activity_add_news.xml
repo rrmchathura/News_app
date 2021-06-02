@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewsActivity">
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar_layout">
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_style_01"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:text="News Type"
+                android:textColor="@color/SecondaryTextColor"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/add_news_verified_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:text="Verified"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/add_news_fake_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:text="Fake"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/add_news_headline_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_style_01"
+            android:ems="10"
+            android:hint="News Headline"
+            android:padding="10dp"
+            android:inputType="text"
+            android:textColor="@color/PrimaryTextColor"
+            android:textColorHint="@color/HintTextColor" />
+
+        <EditText
+            android:id="@+id/add_news_description_input"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_style_01"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="News Description"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColor="@color/PrimaryTextColor"
+            android:textColorHint="@color/HintTextColor" />
+
+        <TextView
+            android:id="@+id/add_news_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="error"
+            android:textAlignment="center"
+            android:textColor="@color/WarningTextColor"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/add_news_submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/main_toolbar"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_style_01"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/LightTextColor"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>
